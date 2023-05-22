@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-419">
+    <head>
+        <meta charset="UTF-8" >
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>
+            CHALLENGES ENCRIPTADOR - ONE ORACLE NEXT EDUCATION - ALURA
+        </title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@500&family=Lora:wght@600&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <script type="text/javascript" src="codigo.js"></script>
+    </head>
+    <body class="entorno">
+        <header class="sector-about">            
+                <img class="logo" src="Imagenes/Logo.svg">            
+        </header>
+        <main class="principal">            
+            <section class="sector-interactionin">
+                    <div class="textarea-group">
+                        <textarea  placeholder=" " id="txaencr" class="txtarea uno"></textarea>
+                        <label class="placeholder">INGRESE EL TEXTO AQUI</label>
+                    </div>
+                    <article class="interactionin-article">                    
+                        <img class="precaucion"src="Imagenes/precaucion.svg" >
+                        <p>Solo letras mayusculas y sin acentos</p>
+                    </article>
+                    <div class="botonera">
+                        <button id="buttencr" class="button one" onclick="verificarTexto('buttencr')" onMouseOver="cambiarColorBoton('si')">Encriptar</button>
+                        <button id="buttdese" class="button two" onclick="verificarTexto('buttdese')" onMouseOver="cambiarColorBoton('no')">Desencriptar</button>
+                    </div>
+            </section>
+            <section class="sector-interactionout"> 
+                <section class="sector-out" id="sectorout"> 
+                    <div class="textarea-groupo">        
+                    <textarea placeholder=" " id="txadese" class="txtarea dos"></textarea>
+                    <label class="lbl-copi"></label>
+                    </div>
+                    <button id="buttcopi" class="button three" onclick="verificarTexto('buttcopi')">
+                            Copiar
+                    </button>
+                </section>    
+                <article class="article-out" id="articleout">
+                    <img class="img-persona" src="Imagenes/Persona.svg">
+                    <p class="warning i">Ningun mensaje fue <div class="i-div">encontrado</div></p>
+                    <p class="warning ii">Ingrese el texto que desees <div class="ii-div">encriptar o desencriptar</div></p>
+                </article>         
+            </section>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+    
+
+</html>
