@@ -53,11 +53,12 @@
 			navigator.clipboard.writeText(txadese.value).then(
 				() => {
 					lblcopi.innerText="Texto copiado"
-					lblcopi.style.display="flex";
+					
 				setTimeout(()=>{
-					lblcopi.style.display="none"
+					lblcopi.innerText=" "
+					
 				}, 1000)
-				/*innerText += clipText)*/
+				
 			});
 		}		
 	}
@@ -79,7 +80,7 @@
 			articleout.style.display="none";
 			let textoencriptado=encriptar(texto,llaves,valores)
 			mostrarrTexto(textoencriptado.join(""));
-			//document.write("<hr><br>"+textoencriptado.join(''));
+			
 		}
 		if(button=="buttdese")
 		{  

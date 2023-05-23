@@ -179,9 +179,10 @@ html{
 .textarea-groupo{
     width:100%;
     height:100%;
+    display:flex;
+    flex-direction: column;
     position:relative;
     background-color: var(--color3);
-    position: relative;
 }
 .dos{
     width: 100%;
@@ -199,11 +200,10 @@ html{
     font-weight: bold; 
 }
 .lbl-copi{
-    display: none;
-    position:absolute;
-    bottom:1rem;
-    left:1rem;
-    right: 1rem;
+    display: flex;
+    position:relative;
+    width:100%;
+    height: 1rem;
     font-size: var(--size11);
     font-weight:bold;
     color:var(--color2);    
@@ -321,6 +321,9 @@ html{
     .dos{
         min-height: 500px;     
     }
+    .lbl-copi{
+        height: 1rem;;
+    }
     .three{    
         height: 60px;    
     }
@@ -396,7 +399,10 @@ html{
     .dos{        
         height:400px; 
         font-size: 1.5rem;     
-    }         
+    }      
+    .lbl-copi{
+        height: 1.6rem;;
+    }   
     .three{  
         height: 76px;
     } 
@@ -494,7 +500,10 @@ html{
     .dos{        
         height: 100%;         
         font-size:2rem;  
-    }         
+    }  
+    .lbl-copi{
+        height: 2rem;;
+    }       
     .three{ 
         height: 80px;
     }
