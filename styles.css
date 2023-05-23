@@ -1,31 +1,61 @@
-
-html{
-    font-size: 100%;
+:root {
+    --size1:1.2rem;/*titulo*/
+    --size2:0.8rem;/*textarea*/
+    --size3:0.6rem;/*precaucion*/
+    --size5:0.8rem;/*botones*/
+    --size6:1rem;/*warning1*/
+    --size7:0.6rem;/*warning2*/
+    --size8:0.6rem;/*footer*/
+    --size9:0.9rem;/*placeholder*/
+    --size10:0.5rem;/*placeholdershown*/
+    --size11:0.6rem;/*lblcopi*/
+    --size12:0.5rem;/*copyright*/
+    --color1:#072B61;/*azul 1*/
+    --color2:#609ED4;/*celeste claro*/
+    --color3:#0A3871;/*azul 2*/
+    --color4:#0b3f7d;/*azul 3*/
+    --color5:#ffffff;/*blanco*/  
 }
-*{
+  *{
     box-sizing: border-box;
     border-radius:0.5rem ;
-    border:0.2rem solid  #072B61;
+    border:0.2rem solid var(--color1);
     font-family: 'Instrument Sans', sans-serif;
     font-family: 'Lora', serif;
     font-family: 'Montserrat', sans-serif;
+}
+html{
+    font-size: 100%;
 }
 .entorno{
     display:flex;
     flex-direction: column;
     width:100wh;
     min-height: 100vh;   
-    background-color: #072B61;
+    background-color:var(--color1);
     margin: 0 auto;
     padding:0.5rem;
 }
 .sector-about{
-    display: flex;
+    display: grid;
+    grid-template-columns:30px 1fr;
     width: 100%;
 }
 .logo{
     width:28px;
     height:45px;
+}
+.titulo{
+    display:flex;
+    position:relative;
+    width:100%;
+    height: 100%;    
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+    color:var(--color2);
+    font-weight: bold;
+    font-size:var(--size1);
 }
 .principal{
     display: flex;
@@ -41,21 +71,20 @@ html{
     width:100%;
     height:100%;
     position:relative;
-    background-color: #0A3871;
+    background-color:var(--color3);
     user-select: none;     
     transition: scale(1.3);
     margin:0 auto;
     padding:0.5rem;
 }
 .sector-interactionin:hover{ 
-    border:0.2rem solid #609ED4;    
+    border:0.2rem solid var(--color2);    
 }
 .textarea-group{
     width:100%;
     height:100%;
     position:relative;
-    background-color: #0A3871;
-    position: relative;
+    background-color:var(--color3);
 }
  .txtarea{     
     width: 100%;
@@ -63,11 +92,11 @@ html{
     resize: none;
     border-color:transparent ;
     background: none;
-    background-color: #0b3f7d;
+    background-color:var(--color4);
     outline: none;
-    color:white;
+    color:var(--color5);
     text-indent: none;
-    font-size:1rem;
+    font-size:var(--size2);
     overflow-y: hidden; 
     box-sizing: border-box;
 }
@@ -76,17 +105,17 @@ html{
     position:absolute;
     top:1rem;
     left:1rem;
-    font-size: 1.2rem;
+    font-weight: bold;
+    font-size: var(--size9);
     padding: 0rem 0.5rem;
-    color:#609ED4;
+    color:var(--color2);
     transition: 0.2s;
     pointer-events: none;    
 }
 .txtarea:focus + .placeholder,.txtarea:not(:placeholder-shown) + .placeholder{
     
     transform:translateY(-1.2rem);
-    font-size: 0.6rem;
-    font-weight:bold;
+    font-size: var(--size10);
 } 
 .interactionin-article{
     display: flex;
@@ -103,9 +132,9 @@ html{
 }
 .interactionin-article:nth-child(2){
     width:100%;
-    color:#ffffff;
+    color:var(--color5);
     display: flex;
-    font-size:0.8rem; 
+    font-size:var(--size3); 
 }
 .botonera{
     display: flex;
@@ -118,25 +147,25 @@ html{
 .button{
     width: 100%; 
     height: 100%;
-    border:0.1rem solid #609ED4;
-    background-color: #609ED4; 
+    border:0.1rem solid var(--color2);
+    background-color: var(--color2); 
     transition: 1s all;
     font-weight: bold;
-    font-size:0.9rem;
-    color: #072B61;
+    font-size:var(--size5);
+    color: var(--color1);
 }
 
 .sector-interactionout{    
     width:100%;
     height:100%;
-    background-color: #0A3871;   
+    background-color: var(--color3);   
     user-select: none;     
     transition: scale(1.3);    
     margin:0 auto;
     padding:0.5rem;
 }
 .sector-interactionout:hover{ 
-    border:0.2rem solid #609ED4;   
+    border:0.2rem solid var(--color2);   
 }
 .sector-out{
     width:100%;
@@ -144,14 +173,14 @@ html{
     display: none;
     flex-direction: column;
     position:relative;
-    background-color: #0A3871;   
+    background-color: var(--color3);   
     user-select: none;
 }
 .textarea-groupo{
     width:100%;
     height:100%;
     position:relative;
-    background-color: #0A3871;
+    background-color: var(--color3);
     position: relative;
 }
 .dos{
@@ -164,9 +193,9 @@ html{
     height: 50px;    
 }
 .three:hover{
-    border-color:#609ED4 ;
-    background-color: #072B61; 
-    color: #609ED4; 
+    border-color:var(--color2);
+    background-color: var(--color1); 
+    color: var(--color2); 
     font-weight: bold; 
 }
 .lbl-copi{
@@ -175,9 +204,9 @@ html{
     bottom:1rem;
     left:1rem;
     right: 1rem;
-    font-size: 1rem;
+    font-size: var(--size11);
     font-weight:bold;
-    color:#609ED4;    
+    color:var(--color2);    
 }
 .article-out{
     display: flex;
@@ -187,7 +216,7 @@ html{
     width:100%;
     height:160px;
     position:relative;
-    background-color: #0b3f7d; 
+    background-color: var(--color4); 
     user-select: none; 
     margin:0 auto;
     padding:0.5rem;
@@ -210,30 +239,49 @@ html{
 
 .i{  
     height: 30px;      
-    color:#609ED4;
+    color:var(--color2);
     font-weight:bold;
-    font-size: 1.2rem;    
+    font-size: var(--size6);    
 }
 .i-div{
-    color:#609ED4;
-    font-size: 1.2rem;
+    color:var(--color2);
+    font-size: var(--size6);
     font-weight:bold;
 }
 .ii{
     height: 20px;
-    color:#ffffff;
-    font-size: 0.7rem;      
+    color:var(--color5);
+    font-size: var(--size7);      
 }
 .ii-div{
-    color:#ffffff;
-    font-size: 0.7rem; 
+    color:var(--color5);
+    font-size: var(--size7); 
+}
+.copyright{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size:var(--size12);
+    color:var(--color5)
 }
 @media (min-width: 375px)and (max-width: 767px) 
 {
+    :root {
+        --size1:1.6rem;/*titulo*/
+        --size2:1.2rem;/*textarea*/
+        --size3:1rem;/*precaucion*/
+        --size5:1.2rem;/*botones*/
+        --size6:1.4rem;/*warning1*/
+        --size7:1rem;/*warning2*/
+        --size8:0.8rem;/*footer*/
+        --size9:1.3rem;/*placeholder*/
+        --size10:0.9rem;/*placeholdershown*/
+        --size11:1rem;/*lblcopi*/
+        --size12:0.7rem;/*copyright*/
+      }
     *{
-        box-sizing: border-box;
         border-radius:1rem; 
-        border:0.3rem solid  #072B61;
+        border:0.3rem solid  var(--color1);
     }
     html{
         font-size: 100%;
@@ -241,6 +289,7 @@ html{
     .entorno{
         padding:1rem;
     }
+
     .principal{       
         gap:1rem;
     }
@@ -249,7 +298,6 @@ html{
     }
     .txtarea{     
         min-height: 440px; 
-        font-size:1rem; 
     }
     .interactionin-article{
         
@@ -257,82 +305,56 @@ html{
         gap:0.5rem;
     }
     .precaucion{
-        display: flex;
         width:0.8rem;  
-    }
-    .interactionin-article:nth-child(2){
-        font-size:0.8rem; 
     }
     .botonera{       
         height: 136px;
-        gap: 0.5rem; 
-        
+        gap: 0.5rem;         
     }
     .button{
         border-radius:0.5rem;
         border-width:0.2rem; 
-        font-weight: bold;
-        font-size:1rem;
     }
-    .sector-interactionout{   
-       
+    .sector-interactionout{      
         padding:1rem;
     }
-    .dos:read-only{
-        width: 100%;
-        min-height: 500px;
-        user-select:none;       
+    .dos{
+        min-height: 500px;     
     }
     .three{    
         height: 60px;    
     }
-    .lbl-copi{
-        font-size: 1.1rem;   
-    }
-
     .article-out{        
         height:160px;   
         text-align:center;     
         gap:0.5rem;
-    }
-    .img-persona{
-        display: none;
-        width: 240px;
-        height:260px;
-        background-color:brown;
-    }
-    .warning{  
-        width:100%;
-        display: flex;      
-        flex-direction: column;
-        text-align: center;
-        }    
+    }  
     .i{  
         height: 50px;       
-        font-size: 1.8rem; 
-        font-weight:bold;      
-    }
-    .i-div{
-        color:#609ED4;
-        font-size: 1.8rem;
-        font-weight:bold;
     }
     .ii{
-        height: 40px;        
-        font-size: 1rem;            
-    }    
-    .ii-div{
-        color:#ffffff;
-        font-size: 1rem; 
-    }
+        height: 40px;             
+    } 
 }
 
 @media (min-width: 768px) and (max-width: 1439px) {
 
+    :root {
+        --size1:2rem;/*titulo*/
+        --size2:1.6rem;/*textarea*/
+        --size3:1.4rem;/*precaucion*/
+        --size5:1.6rem;/*botones*/
+        --size6:1.8rem;/*warning1*/
+        --size7:1.4rem;/*warning2*/
+        --size8:0.8rem;/*footer*/
+        --size9:1.7rem;/*placeholder*/
+        --size10:1.3rem;/*placeholdershown*/
+        --size11:1.4rem;/*lblcopi*/
+        --size12:0.9rem;/*copyright*/
+      }
     *{
-        box-sizing: border-box;
         border-radius:1.5rem;
-        border:0.4rem solid  #072B61;  
+        border:0.4rem solid var(--color1);  
     }
    .principal{
         gap:2rem;
@@ -344,31 +366,18 @@ html{
     }
  .txtarea{    
         height: 580px;  
-        font-size:1.5rem;   
     } 
     .placeholder{
-        position:absolute;
-        top:1rem;
-        left:1rem;
-        font-size: 2rem;
-        padding: 0rem 1rem;
-        color:#609ED4;
-        transition: 0.2s;
-        pointer-events: none;    
+        padding: 0rem 1rem;  
     }
     .txtarea:focus + .placeholder,.txtarea:not(:placeholder-shown) + .placeholder{
         transform:translateY(-1.5rem);
-        font-size: 1rem;
-        font-weight: bold;
     }      
     .interactionin-article{
         height: 60px;
     }
     .precaucion{
         width:1.1rem;
-    }
-    .interactionin-article:nth-child(2){
-        font-size:1.2rem; 
     }
     .botonera{
         display:flex;
@@ -377,34 +386,24 @@ html{
         gap:1rem; 
     }
     .button{
-        width: 100%;  
         margin:0; 
         border-radius:0.5rem;
         border-width:0.2rem; 
-        font-weight: bold;   
-        font-size:1.5rem;   
     }   
     .sector-interactionout{
         padding:2rem;
     }
-    .dos:read-only{        
+    .dos{        
         height:400px; 
-        font-size: 1.5rem;  
-        user-select:none;     
+        font-size: 1.5rem;     
     }         
     .three{  
         height: 76px;
-        font-size: 1.3rem;
     } 
-    .lbl-copi{
-        font-size: 1.3rem;   
-    }
-    .article-out{   
-        align-items:center;    
+    .article-out{     
         height:200px;
     }
     .warning{  
-        width:100%;
         display: flex;      
         flex-direction: row;
         justify-content: center;
@@ -412,42 +411,41 @@ html{
         text-align: center;
     }
     .i{      
-        height: 60px;      
-        font-size: 2.3rem;
-        font-weight:bold;         
-    }
-    .i-div{
-        color:#609ED4;
-        font-size: 2.3rem;
-        font-weight:bold;
+        height: 60px;         
     }
     .ii{       
-        height: 50px;        
-        font-size: 1.5rem;        
-    }          
-    .ii-div{
-        color:#ffffff;
-        font-size: 1.5rem;
+        height: 50px;             
     }
 }
 @media (min-width: 1440px)
 {
+    :root {
+        --size1:2.4rem;/*titulo*/
+        --size2:2rem;/*textarea*/
+        --size3:1.7rem;/*precaucion*/
+        --size5:2rem;/*botones*/
+        --size6:1.9rem;/*warning1*/
+        --size7:1.3rem;/*warning2*/
+        --size8:0.8rem;/*footer*/
+        --size9:2.1rem;/*placeholder*/
+        --size10:1.7rem;/*placeholdershown*/
+        --size11:1.8rem;/*lblcopi*/
+        --size12:1.1rem;/*copyright*/
+      }
     *{
-        box-sizing: border-box;
-        border:0.5rem solid  #072B61;
+        border:0.5rem solid  var(--color1);
         border-radius:2rem;  
     }
     .entorno {
         max-width: 3840px;
         padding:2rem; 
       }
-      .sector-about-logo{
-        width:100%;
-    }
     .logo{
         width:42px;
-        height:68px;
-        
+        height:68px;       
+    }
+    .titulo{
+        font-size: var(--size1);
     }
      .principal{
         display: grid;
@@ -455,44 +453,27 @@ html{
         width:100%;
         height:100%;
         gap: 3rem;
-        box-sizing: border-box;
-        
+        box-sizing: border-box;        
     }
     .sector-interactionin{
-        width: 100%;
-        height: 100%;
         padding:3rem;
     }
     .txtarea{  
-        width: 100%;
-        height: 100%;         
-        font-size:1.8rem;    
+        height: 100%;     
     }
     .placeholder{
-        position:absolute;
         top:1.5rem;
         left:1.5rem;
-        font-size: 1.8rem;
-        padding: 0rem 1rem;
-        color:#609ED4;
-        transition: 0.2s;
-        pointer-events: none;    
+        padding: 0rem 1rem; 
     }
     .txtarea:focus + .placeholder,.txtarea:not(:placeholder-shown) + .placeholder{
         transform:translateY(-2.1rem);
-        font-size: 1.3rem;
-        font-weight:bold;
     } 
-
     .interactionin-article{ 
-        width: 100%;
         height: 60px;
     }
     .precaucion{
         width:1.5rem;
-    }
-    .interactionin-article:nth-child(2){
-        font-size:1.5rem; 
     }
     .botonera{
         display: grid;
@@ -500,14 +481,9 @@ html{
         height: 80px;  
     }
     .button{
-        width: 100%; 
-        height: 100%;
-        font-size: 1.6rem;
         border-radius:0.5rem;
         border-width:0.2rem; 
-        font-weight: bold;    
-    }
-    
+    }    
     .sector-interactionout{ 
         display: flex;
         flex-direction:column;
@@ -515,20 +491,12 @@ html{
         align-items:center;
         padding:3rem; 
     }
-    .dos:read-only{        
-        width: 100%;
+    .dos{        
         height: 100%;         
         font-size:2rem;  
-        user-select:none;  
-        -webkit-user-drag: none;
-    }
-         
+    }         
     .three{ 
         height: 80px;
-        font-size: 2rem;
-    }
-    .lbl-copi{
-        font-size: 2rem;   
     }
     .article-out{        
         height:100%;
@@ -538,29 +506,13 @@ html{
         display: flex;
         width: 100%;
         height:40%;
-        background-color:none;
-    }
-   
+    }   
     .i{  
-        height: 60px;      
-        color:#609ED4;
-        font-weight:bold;
-        font-size: 2rem;
-        
-    }
-    .i-div{
-        color:#609ED4;
-        font-weight:bold;
-        font-size: 2rem;
-    }
+        height: 60px;        
+    }   
     .ii{
         height: 40px;
-        color:#ffffff;
-        font-size: 1.4rem;  
     }
-    .ii-div{
-        color:#ffffff;
-        font-size: 1.4rem; 
-    }
+   
 }
 
