@@ -269,7 +269,7 @@ html{
     :root {
         --size1:1.6rem;/*titulo*/
         --size2:1.2rem;/*textarea*/
-        --size3:1rem;/*precaucion*/
+        --size3:0.9rem;/*precaucion*/
         --size5:1.2rem;/*botones*/
         --size6:1.4rem;/*warning1*/
         --size7:1rem;/*warning2*/
@@ -297,7 +297,7 @@ html{
         padding:1rem;
     }
     .txtarea{     
-        min-height: 440px; 
+        min-height: 410px; 
     }
     .interactionin-article{
         
